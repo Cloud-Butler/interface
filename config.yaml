@@ -1,0 +1,16 @@
+---
+cog_bundle_version: 4
+
+name: cloudbutler
+version: 1.0.0
+docker:
+  image: cloudbutler/cloudbutler
+  tag: 0.0.1
+description: Interactive help bundle for navigating CloudButler features
+author: Joseph Belyeu <github.com/jcbelyeu>
+commands:
+  bundles:
+    executable: cat /home/bundle/helpDocs/bundles.txt
+    description: Get description of what bundles are in CloudButler #whatever feature this documentation explains
+    rules:
+      - allow

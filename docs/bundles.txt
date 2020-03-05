@@ -1,0 +1,1 @@
+CloudButler can be extended by installing bundles that contain additional functionality.
