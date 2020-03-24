@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Verify values.
 if [ ${COG_OPT_USER} ] || [ ${COG_OPT_PASSWORD} ]; then
