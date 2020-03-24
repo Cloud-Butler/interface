@@ -2,10 +2,10 @@
 cog_bundle_version: 4
 
 name: helper
-version: 1.0.0
+version: 0.0.1
 docker:
   image: cloudbutler/helper
-  tag: 0.0.2
+  tag: 0.0.1
 description: Interactive help bundle for navigating CloudButler features
 author: Joseph Belyeu <github.com/jcbelyeu>
 commands:
@@ -29,6 +29,22 @@ commands:
     description: Links to useful bundles that someone else made for you 
     rules:
       - allow
+  add-owner:
+    executable: /home/bundle/bin/add-owner.sh
+    description: Adds a user to the chatbot owner group.
+    rules:
+      - allow
+    options:
+      user:
+        description: Specifies the username of the owner to be added.
+        type: string
+        required: true
+        short_flag: u
+      password:
+        description: Specifies the master password for the chatbot instance.
+        type: string
+        required: true
+        short_flag: p
   source-code:
     executable: /home/bundle/docs/sourceCode/sourceCode.sh
     description: Find out more about CloudButler from its repo
