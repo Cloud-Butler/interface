@@ -2,30 +2,30 @@
 cog_bundle_version: 4
 
 name: helper
-version: 0.0.1
+version: 0.0.2
 docker:
   image: cloudbutler/helper
-  tag: 0.0.1
+  tag: 0.0.2
 description: Interactive help bundle for navigating CloudButler features
 author: Joseph Belyeu <github.com/jcbelyeu>
 commands:
   architecture:
-    executable: /home/bundle/docs/architecture.sh
+    executable: /home/bundle/bin/architecture.sh
     description: Get a description of the architecture of CloudButler
     rules:
       - allow
   bundles:
-    executable: /home/bundle/docs/adding-bundles/adding-bundles.sh
+    executable: /home/bundle/bin/bundles.sh
     description: Get description of what bundles are in CloudButler 
     rules:
       - allow
   make-bundle:
-    executable: /home/bundle/docs/architecture/architecture.sh
+    executable: /home/bundle/bin/architecture.sh
     description: Learn more about how architecture is set up in Cloudbutler
     rules:
       - allow
   prebuilt:
-    executable: /home/bundle/docs/prebuiltBundles/prebuiltBundles.sh
+    executable: /home/bundle/bin/prebuilt.sh
     description: Links to useful bundles that someone else made for you 
     rules:
       - allow
@@ -46,17 +46,17 @@ commands:
         required: true
         short_flag: p
   source-code:
-    executable: /home/bundle/docs/sourceCode/sourceCode.sh
+    executable: /home/bundle/bin/source-code.sh
     description: Find out more about CloudButler from its repo
     rules:
       - allow
   user-groups:
-    executable: /home/bundle/docs/user-groups/user-groups.sh
+    executable: /home/bundle/bin/user-groups.sh
     description: Learn more about how groups work in CloudButler
     rules:
       - allow
   vocab:
-    executable: /home/bundle/docs/vocab/vocab.sh
+    executable: /home/bundle/bin/vocab.sh
     description: For looking up specific words in the context of CloudButler
     rules:
       - allow
