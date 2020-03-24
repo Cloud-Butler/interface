@@ -1,0 +1,1 @@
+cat architecture.txt

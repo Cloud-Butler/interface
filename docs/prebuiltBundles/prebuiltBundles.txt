@@ -1,0 +1,5 @@
+Atlthough we've tried to make the process transparent, bundles can be complicated to write, particularly as you're getting started. Happily, someone has already written a bunch of bundles, which you can access here:
+
+ https://github.com/cogcmd
+
+You can install these bundles by following the instructions found with cloudbutler:adding-bundles. Even if you don't end up using them, however, they can be valuable for understanding syntax as you create your own bundles.

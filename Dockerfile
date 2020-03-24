@@ -1,16 +1,32 @@
-FROM alpine:3.4
+# Define base image.
+FROM python:3.5-alpine
 
-# Setup bundle user and directory
+# Install dependencies for CogCtl.
+RUN apk --update --no-cache add \
+    zlib-dev \
+    musl-dev \
+    libc-dev \
+    gcc \
+    git \
+    pwgen \
+    && pip install --upgrade pip
+
+# Setup bundle user and directory.
 RUN mkdir -p /home/bundle && \
     adduser -h /home/bundle -s /bin/bash -D bundle
-
-# Copy the bundle source to the image
 WORKDIR /home/bundle
+
+# Copy the bundle source to the image.
 COPY docs/ /home/bundle/docs/
 COPY bin/ /home/bundle/bin/
+COPY lib/cogctl /usr/local/bin/cogctl
 
-# Make sure user has rights
+# Make sure user has rights.
 RUN chown -R bundle:bundle /home/bundle
 
-# Drop privileges
+# Drop privileges.
 USER bundle
+WORKDIR /home/bundle
+
+# Set variables.
+CMD "cogctl profile create default http://localhost:4000 "admin" "${CB_ADMIN_PASSWORD}"

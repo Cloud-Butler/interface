@@ -1,0 +1,9 @@
+CloudButler can be extended by installing bundles. We have already built some bundles into Cloudbutler, but you can also build your own!
+
+Learn more about bundles here: https://operable.github.io/cog-book/sections/commands_and_bundles.html
+
+List prebuilt bundles: cloudbutler:prebuilt
+
+Learn more about making your own bundles: cloudbutler:bundles
+
+Learn generally about bundles: https://operable.github.io/cog-book/sections/commands_and_bundles.html

@@ -1,0 +1,1 @@
+Cloudbutler is extended from a chatbot called Cog. Most of the core architecture in Cloudbutler is the same as Cog, check it out here: https://operable.github.io/cog-book/sections/cog_architecture.html. 

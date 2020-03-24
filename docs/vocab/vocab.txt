@@ -1,0 +1,1 @@
+If you encounter a term in Cloudbutler that you haven't learned, use the command cloudbutler:vocab <term> to find out what it means.
