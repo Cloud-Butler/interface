@@ -19,7 +19,7 @@ WORKDIR /home/bundle
 # Copy the bundle source to the image.
 COPY docs/ /home/bundle/docs/
 COPY bin/ /home/bundle/bin/
-COPY lib/cogctl /usr/local/bin/cogctl
+COPY lib/cogctl /usr/bin/cogctl
 
 # Make sure user has rights.
 RUN chown -R bundle:bundle /home/bundle

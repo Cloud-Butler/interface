@@ -1,4 +1,4 @@
-Cloudbutler features a host of permissions options, to ensure that its features are exposed to the right people, but not the wrong people! Here's a good document to learn more about permissions: 
+Cloudbutler features a host of permissions options, to ensure that its features are exposed to the right people, but not the wrong people! Here's a good document to learn more about permissions in Cloudbutler: 
 
 https://operable.github.io/cog-book/sections/permissions_and_rules.html#authorization-rules
  

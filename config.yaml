@@ -2,10 +2,10 @@
 cog_bundle_version: 4
 
 name: helper
-version: 0.0.4
+version: 0.0.5
 docker:
   image: cloudbutler/helper
-  tag: 0.0.4
+  tag: 0.0.5
 description: Interactive help bundle for navigating CloudButler features
 author: Joseph Belyeu <github.com/jcbelyeu>
 commands:
@@ -29,9 +29,25 @@ commands:
     description: Links to useful bundles that someone else made for you 
     rules:
       - allow
-  add-owner:
-    executable: /home/bundle/bin/add-owner.sh
+  owner-add:
+    executable: /home/bundle/bin/owner-add.sh
     description: Adds a user to the chatbot owner group.
+    rules:
+      - allow
+    options:
+      user:
+        description: Specifies the username of the owner to be added.
+        type: string
+        required: true
+        short_flag: u
+      password:
+        description: Specifies the master password for the chatbot instance.
+        type: string
+        required: true
+        short_flag: p
+  owner-remove:
+    executable: /home/bundle/bin/owner-remove.sh
+    description: Removes a user from the chatbot owner group. Be careful!
     rules:
       - allow
     options:
@@ -70,12 +86,14 @@ commands:
     description: Quick explanation of how to get started.
     rules:
       - allow
-  printenv:
-    executable: /home/bundle/bin/printenv.sh
+  help-me: 
+    executable: /home/bundle/bin/start.sh
+    description: Quick explanation of how to get started.
     rules:
       - allow
   cogctl:
     executable: /home/bundle/bin/cogctl.sh
+    description: Execute CogCtl commands as if you were in the terminal.
     rules:
       - allow
     options:
@@ -86,5 +104,6 @@ commands:
         short_flag: p
   eval:
     executable: /home/bundle/bin/eval.sh
+    description: Runs a single-word bash command within a testing container, helpful for building bundles.
     rules:
       - allow
