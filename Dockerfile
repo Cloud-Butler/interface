@@ -28,5 +28,3 @@ RUN chown -R bundle:bundle /home/bundle
 USER bundle
 WORKDIR /home/bundle
 
-# Set variables.
-CMD "cogctl profile create default http://localhost:4000 "admin" "${CB_ADMIN_PASSWORD}"

@@ -1,0 +1,9 @@
+Welcome to CloudButler! 
+This chatbot was designed to be extremely easy to use and flexible to your use case. We recommend you start up a private chat with the bot and use these commands to get set up.
+1. `help operable`: This will explain the large majority of the chatbot's features.
+2. `set-owner`: This will get you set up as an admin on the bot so that you can start making changes.
+3. `user-list`: Use this to get informed on the users already using the bot.
+4. `help helper`: Get a list of other commands you might want to use to get started.
+
+This platform is based on the Cog platform, orginally created by Operable.
+<https://operable.github.io/cog-book/sections/getting_started.html>

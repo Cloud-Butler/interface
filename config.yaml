@@ -2,10 +2,10 @@
 cog_bundle_version: 4
 
 name: helper
-version: 0.0.2
+version: 0.0.4
 docker:
   image: cloudbutler/helper
-  tag: 0.0.2
+  tag: 0.0.4
 description: Interactive help bundle for navigating CloudButler features
 author: Joseph Belyeu <github.com/jcbelyeu>
 commands:
@@ -58,5 +58,33 @@ commands:
   vocab:
     executable: /home/bundle/bin/vocab.sh
     description: For looking up specific words in the context of CloudButler
+    rules:
+      - allow
+  get-started:
+    executable: /home/bundle/bin/start.sh
+    description: Quick explanation of how to get started.
+    rules:
+      - allow
+  start: 
+    executable: /home/bundle/bin/start.sh
+    description: Quick explanation of how to get started.
+    rules:
+      - allow
+  printenv:
+    executable: /home/bundle/bin/printenv.sh
+    rules:
+      - allow
+  cogctl:
+    executable: /home/bundle/bin/cogctl.sh
+    rules:
+      - allow
+    options:
+      password:
+        description: Specifies the master password for the chatbot instance.
+        type: string
+        required: true
+        short_flag: p
+  eval:
+    executable: /home/bundle/bin/eval.sh
     rules:
       - allow
